@@ -44,7 +44,10 @@ nikola build
 
 echo "==> Publishing..."
 if ! $INPUT_DRY_RUN; then
-    nikola github_deploy -m "${{ env.commitmsg }}"
+echo "==> cmtmsg..."
+
+	echo $commitmsg
+    nikola github_deploy -m ${commitmsg}
 else
     echo "Dry-run, skipping..."
 fi
