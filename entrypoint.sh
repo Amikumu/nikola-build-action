@@ -47,7 +47,7 @@ if ! $INPUT_DRY_RUN; then
 echo "==> cmtmsg..."
 
 	echo $commitmsg
-    nikola github_deploy -m ${commitmsg}
+    nikola github_deploy -m "${{ env.commitmsg }}"
 else
     echo "Dry-run, skipping..."
 fi
