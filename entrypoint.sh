@@ -11,7 +11,7 @@ echo "==> Preparing..."
 if ! $INPUT_DRY_RUN; then
     src_branch="$(python -c 'import conf; print(conf.GITHUB_SOURCE_BRANCH)')"
     dest_branch="$(python -c 'import conf; print(conf.GITHUB_DEPLOY_BRANCH)')"
-    git config --global user.email 105642861+Amikumu@users.noreply.github.com
+    git config --global user.email help@amikumu.com
     git config --global user.name Amikumu
     git config --global --add safe.directory /github/workspace
     git remote add ghpages "https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
